@@ -190,7 +190,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.all(24),
                               hintText: hintText,
-                              hintStyle: TextStyle(color: Colors.black.withOpacity(0.70), fontWeight: FontWeight.w600),
+                              hintStyle: TextStyle(color: Colors.black.withOpacity(0.60), fontWeight: FontWeight.w600),
                               fillColor: whiteSmoke,
                               border: inputFieldsBorder,
                               focusedBorder: inputFieldsBorder,
