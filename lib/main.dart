@@ -5,7 +5,11 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: RegisterPage());
+    return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+      ),
+        home: RegisterPage());
   }
 }
 
@@ -17,7 +21,7 @@ class RegisterPage extends StatefulWidget {
 class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
+//    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
     Color whiteSmoke = Color.fromRGBO(243, 241, 249, 1);
@@ -77,7 +81,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       TextSpan(
                         text: 'Try it free 7 days ',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w600,
                           fontSize: 16,
                         ),
                       ),
@@ -106,9 +110,10 @@ class _RegisterPageState extends State<RegisterPage> {
                               buildInputField(whiteSmoke, inputFieldsBorder, 'Password'),
                               //Submit button
                               buildButton(mediumSeaGreen, whiteSmoke, [TextSpan(
-                                text: 'CLAIM YOUR FREE TRAIL ',
+                                text: 'CLAIM YOUR FREE TRAIL',
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.w600,
+                                  letterSpacing: 1.0,
                                   fontSize: 16,
                                 ),
                               ),], Color.fromRGBO(108, 185, 153,1)),
@@ -127,7 +132,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                           TextSpan(
                                             text: 'By clicking the button you are agreeing to ',),
                                           TextSpan(text: 'our '),
-                                          TextSpan(text: 'Terms and Services', style: TextStyle(color: salmon, fontWeight: FontWeight.bold)),
+                                          TextSpan(text: 'Terms and Services', style: TextStyle(color: salmon, fontWeight: FontWeight.w500)),
                                         ]
                                     )),
                               ),
@@ -185,7 +190,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.all(24),
                               hintText: hintText,
-                              hintStyle: TextStyle(color: Colors.black.withOpacity(0.70), fontWeight: FontWeight.bold),
+                              hintStyle: TextStyle(color: Colors.black.withOpacity(0.70), fontWeight: FontWeight.w600),
                               fillColor: whiteSmoke,
                               border: inputFieldsBorder,
                               focusedBorder: inputFieldsBorder,
